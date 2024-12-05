@@ -90,3 +90,10 @@ footer a {
 footer a:hover {
     color: white; /* Change la couleur au survol */
 }
+.responsive-image {
+    width: 100%; /* L'image occupe toute la largeur de son conteneur */
+    height: auto; /* La hauteur s'ajuste automatiquement pour respecter les proportions */
+    max-width: 100%; /* L'image ne dépasse pas sa taille originale */
+    display: block; /* Évite les espaces blancs indésirables */
+  }
+  
