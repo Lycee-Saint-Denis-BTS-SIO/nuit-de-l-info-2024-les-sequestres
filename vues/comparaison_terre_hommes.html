@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protection des Océans</title>
+    <link rel="stylesheet" href="../styles/comparaison_terre_hommes.css">
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="site-title">Protection des Océans</h1>
+            <nav>
+                <ul class="menu">
+                    <li><a href="#home">Accueil</a></li>
+                    <li><a href="#about">À Propos</a></li>
+                    <li><a href="#quiz">Quiz</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Pop-up de succès -->
+    <div id="success-popup" class="popup" style="display: none;">
+        <div class="popup-content">
+            <img src="../images/tu_as_reussi.jpg" alt="Félicitations !" class="popup-image">
+            <p>Félicitations ! Vous avez bien compris ! 🎉</p>
+            <button onclick="closePopup('success-popup')">Fermer</button>
+        </div>
+    </div>
+
+    <!-- Pop-up d'échec -->
+    <div id="fail-popup" class="popup" style="display: none;">
+        <div class="popup-content">
+            <img src="../images/recommenceencore.png" alt="Réessayez" class="popup-image">
+            <p>Tu feras mieux la prochaine fois pour sauver le monde ! 🌍</p>
+            <button onclick="closePopup('fail-popup')">Fermer</button>
+        </div>
+    </div>
+
+    <main>
+        <div class="container">
+            <!-- Section d'explication avec boutons de modales -->
+            <section class="section" id="home">
+                <h2>Bienvenue</h2>
+                <p>
+                    L'eau est la source de vie sur Terre, mais elle est aujourd'hui gravement menacée. Que ce soit dans les océans, les rivières, les lacs ou même dans l'air sous forme d'humidité, l'eau est partout. Cependant, la pollution la touche à tous les niveaux, affectant à la fois la santé des écosystèmes et celle des humains. Plastiques, produits chimiques et bactéries pathogènes envahissent notre environnement, mettant en péril l'équilibre naturel.
+                </p>
+                <p>
+                    Prenez un moment pour découvrir les principaux impacts environnementaux avant de tester vos connaissances avec notre quiz.
+                </p>
+                <p>Cliquez sur les boutons ci-dessous pour découvrir les impacts environnementaux avant de commencer le quiz.</p>
+                <button class="modal-button" data-modal="modal1">Effets des Microplastiques</button>
+                <button class="modal-button" data-modal="modal2">Produits Chimiques Toxiques</button>
+                <button class="modal-button" data-modal="modal3">Pathogènes et Bactéries</button>
+            </section>
+
+            <!-- Section Quiz -->
+            <section class="section" id="quiz">
+                <div class="quiz-layout">
+                    <!-- Texte à gauche -->
+                    <div class="text-container">
+                        <p>
+                            L'eau est la source de vie sur Terre, mais elle est aujourd'hui gravement menacée. Que ce soit dans les océans, les rivières, les lacs ou même dans l'air sous forme d'humidité, l'eau est partout. Cependant, la pollution la touche à tous les niveaux, affectant à la fois la santé des écosystèmes et celle des humains. Plastiques, produits chimiques et bactéries pathogènes envahissent notre environnement, mettant en péril l'équilibre naturel.
+                        </p>
+                    </div>
+            
+                    <!-- Quiz à droite -->
+                    <div class="quiz-container">
+                        <div class="questions">
+                            <div class="question-container">
+                            <p>1. Quel pourcentage de l'eau sur Terre se trouve dans les calottes glaciaires ?</p>
+                            <button class="answer" data-answer="true">1.9%</button>
+                            <button class="answer" data-answer="false">0.1%</button>
+                            <button class="answer" data-answer="false">0.6%</button>
+                            <button class="answer" data-answer="false">97.4%</button>
+                        </div>
+
+                        <div class="question-container">
+                            <p>2. Quel pourcentage de l'eau sur Terre est absorbé par la terre (sol) ?</p>
+                            <button class="answer" data-answer="true">0.1%</button>
+                            <button class="answer" data-answer="false">1.9%</button>
+                            <button class="answer" data-answer="false">0.6%</button>
+                            <button class="answer" data-answer="false">97.4%</button>
+                        </div>
+
+                        <div class="question-container">
+                            <p>3. Quel pourcentage de l'eau sur Terre est contenu dans les eaux souterraines ?</p>
+                            <button class="answer" data-answer="true">0.6%</button>
+                            <button class="answer" data-answer="false">0.1%</button>
+                            <button class="answer" data-answer="false">1.9%</button>
+                            <button class="answer" data-answer="false">97.4%</button>
+                        </div>
+
+                        <div class="question-container">
+                            <p>4. Quel pourcentage de l'eau sur Terre se trouve dans les océans ?</p>
+                            <button class="answer" data-answer="true">97.4%</button>
+                            <button class="answer" data-answer="false">0.6%</button>
+                            <button class="answer" data-answer="false">0.1%</button>
+                            <button class="answer" data-answer="false">1.9%</button>
+                        </div>
+
+                        <div class="question-container">
+                            <p>5. Quel pourcentage de l'eau sur Terre se trouve dans l'atmosphère ?</p>
+                            <button class="answer" data-answer="true">0.001%</button>
+                            <button class="answer" data-answer="false">97.4%</button>
+                            <button class="answer" data-answer="false">0.6%</button>
+                            <button class="answer" data-answer="false">1.9%</button>
+                        </div>
+                    </div>
+</div>
+</section>
+                    <!-- Score Container -->
+                    <div class="score-container">
+                        <p id="score">Bonnes réponses: 0 | Mauvaises réponses: 0</p>
+                    </div>
+                </div>
+                <div id="feedback"></div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2024 - Protection des Océans</p>
+            <p>Sources : <a href="#">Greenpeace</a>, <a href="#">Nations Unies</a></p>
+        </div>
+    </footer>
+
+    <!-- Modales -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close" data-modal="modal1">&times;</span>
+            <div class="modal-header">Effets des Microplastiques</div>
+            <div class="modal-body">
+                <p>Les microplastiques : un danger invisible mais omniprésent
+                    Chaque année, des millions de tonnes de plastique sont rejetées dans la nature. Sous l'effet du temps, ces plastiques se fragmentent en particules minuscules appelées microplastiques. Invisibles à l'œil nu, elles pénètrent les chaînes alimentaires marines, s'accumulent dans les poissons et fruits de mer, et atteignent finalement notre assiette. Les microplastiques perturbent les systèmes hormonaux, provoquent des inflammations, et peuvent même être liés à des cancers.
+                    
+                    Le saviez-vous ? Même les eaux de pluie contiennent désormais des microplastiques.</p>
+            </div>
+        </div>
+    </div>
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close" data-modal="modal2">&times;</span>
+            <div class="modal-header">Produits Chimiques Toxiques</div>
+            <div class="modal-body">
+<p>Les produits chimiques : une menace silencieuse pour nos océans
+    Les pesticides, les engrais et les déchets industriels contaminent chaque année des milliards de litres d'eau douce et salée. Ces produits chimiques, souvent invisibles, se dissolvent dans l'eau et affectent les écosystèmes marins. Ils provoquent des zones mortes dans les océans où aucune vie ne peut survivre. Chez les humains, ces toxines entraînent des maladies graves comme les troubles neurologiques, les cancers, et des problèmes de fertilité.
+    
+    Le saviez-vous ? Une goutte d'huile moteur peut contaminer 25 litres d'eau potable.</p>            </div>
+        </div>
+    </div>
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <span class="close" data-modal="modal3">&times;</span>
+            <div class="modal-header">Pathogènes et Bactéries</div>
+            <div class="modal-body">
+<p>Pathogènes : l'ennemi invisible dans l'eau polluée
+    Lorsque des eaux usées non traitées se mélangent aux sources d'eau douce et salée, elles introduisent des bactéries, virus et parasites pathogènes. Ces contaminants sont responsables de maladies graves comme le choléra, les hépatites et des infections digestives. Les fruits de mer contaminés deviennent un vecteur fréquent de transmission.
+    
+    Le saviez-vous ? Plus de 80 % des eaux usées mondiales sont rejetées dans la nature sans traitement.</p>            </div>
+        </div>
+    </div>
+
+    <script src="comparaison_terre_hommes.js"></script>
+</body>
+</html>
