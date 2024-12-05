@@ -42,12 +42,12 @@ header {
     color: white;
     padding: 0.75rem 1.5rem;
     border-radius: 10px;
-    background: rgba(148, 210, 189, 0.5);
+    background: #7681B3;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .menu a:hover {
-    background-color: #A3D5FF;
+    background-color: #94d2bd;
     transform: scale(1.1);
 }
 
