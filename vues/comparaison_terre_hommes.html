@@ -44,18 +44,28 @@
             <!-- Section d'explication avec boutons de modales -->
             <section class="section" id="home">
                 <h2>Bienvenue</h2>
-                <p>
-                    L'eau est la source de vie sur Terre, mais elle est aujourd'hui gravement menacée. Que ce soit dans les océans, les rivières, les lacs ou même dans l'air sous forme d'humidité, l'eau est partout. Cependant, la pollution la touche à tous les niveaux, affectant à la fois la santé des écosystèmes et celle des humains. Plastiques, produits chimiques et bactéries pathogènes envahissent notre environnement, mettant en péril l'équilibre naturel.
-                </p>
-                <p>
-                    Prenez un moment pour découvrir les principaux impacts environnementaux avant de tester vos connaissances avec notre quiz.
-                </p>
+                
+             
                 <p>Cliquez sur les boutons ci-dessous pour découvrir les impacts environnementaux avant de commencer le quiz.</p>
                 <button class="modal-button" data-modal="modal1">Effets des Microplastiques</button>
                 <button class="modal-button" data-modal="modal2">Produits Chimiques Toxiques</button>
                 <button class="modal-button" data-modal="modal3">Pathogènes et Bactéries</button>
             </section>
-
+            <section class="image-section">
+                <div class="image-container">
+                    <img src="../images/Cycle_de_l’eau_0.png" alt="Image de l'océan 1">
+                </div>
+                <div class="image-container">
+                    <img src="../images/Figure_1.width-600.jpg" alt="Image de l'océan 2" class="clickable" data-large="../images/Figure_1.width-600.jpg">
+                </div>
+                
+                <!-- Modal pour afficher l'image en grand -->
+                <div id="image-modal" class="image-modal">
+                    <span class="close-modal">&times;</span>
+                    <img class="modal-content" id="modal-image" src="../images/Figure_1.width-600.jpg">
+                </div>
+                
+            </section>
             <!-- Section Quiz -->
             <section class="section" id="quiz">
                 <div class="quiz-layout">
@@ -70,47 +80,96 @@
                     <div class="quiz-container">
                         <div class="questions">
                             <div class="question-container">
-                            <p>1. Quel pourcentage de l'eau sur Terre se trouve dans les calottes glaciaires ?</p>
-                            <button class="answer" data-answer="true">1.9%</button>
-                            <button class="answer" data-answer="false">0.1%</button>
-                            <button class="answer" data-answer="false">0.6%</button>
-                            <button class="answer" data-answer="false">97.4%</button>
-                        </div>
-
-                        <div class="question-container">
-                            <p>2. Quel pourcentage de l'eau sur Terre est absorbé par la terre (sol) ?</p>
-                            <button class="answer" data-answer="true">0.1%</button>
-                            <button class="answer" data-answer="false">1.9%</button>
-                            <button class="answer" data-answer="false">0.6%</button>
-                            <button class="answer" data-answer="false">97.4%</button>
-                        </div>
-
-                        <div class="question-container">
-                            <p>3. Quel pourcentage de l'eau sur Terre est contenu dans les eaux souterraines ?</p>
-                            <button class="answer" data-answer="true">0.6%</button>
-                            <button class="answer" data-answer="false">0.1%</button>
-                            <button class="answer" data-answer="false">1.9%</button>
-                            <button class="answer" data-answer="false">97.4%</button>
-                        </div>
-
-                        <div class="question-container">
-                            <p>4. Quel pourcentage de l'eau sur Terre se trouve dans les océans ?</p>
-                            <button class="answer" data-answer="true">97.4%</button>
-                            <button class="answer" data-answer="false">0.6%</button>
-                            <button class="answer" data-answer="false">0.1%</button>
-                            <button class="answer" data-answer="false">1.9%</button>
-                        </div>
-
-                        <div class="question-container">
-                            <p>5. Quel pourcentage de l'eau sur Terre se trouve dans l'atmosphère ?</p>
-                            <button class="answer" data-answer="true">0.001%</button>
-                            <button class="answer" data-answer="false">97.4%</button>
-                            <button class="answer" data-answer="false">0.6%</button>
-                            <button class="answer" data-answer="false">1.9%</button>
-                        </div>
+                                <p>1. Quel pourcentage de l'eau sur Terre se trouve dans les calottes glaciaires ?</p>
+                                <button class="answer" data-answer="false">2.0%</button>
+                                <button class="answer" data-answer="true">1.9%</button>
+                                <button class="answer" data-answer="false">1.8%</button>
+                                <button class="answer" data-answer="false">2.1%</button>
+                            </div>
+                            
+                            <div class="question-container">
+                                <p>2. Quel pourcentage de l'eau sur Terre est absorbé par la terre (sol) ?</p>
+                                <button class="answer" data-answer="false">0.09%</button>
+                                <button class="answer" data-answer="false">0.12%</button>
+                                <button class="answer" data-answer="true">0.1%</button>
+                                <button class="answer" data-answer="false">0.08%</button>
+                            </div>
+                            
+                            <div class="question-container">
+                                <p>3. Quel pourcentage de l'eau sur Terre est contenu dans les eaux souterraines ?</p>
+                                <button class="answer" data-answer="false">0.7%</button>
+                                <button class="answer" data-answer="true">0.6%</button>
+                                <button class="answer" data-answer="false">0.5%</button>
+                                <button class="answer" data-answer="false">0.65%</button>
+                            </div>
+                            
+                            <div class="question-container">
+                                <p>4. Quel pourcentage de l'eau sur Terre se trouve dans les océans ?</p>
+                                <button class="answer" data-answer="false">97.5%</button>
+                                <button class="answer" data-answer="false">97.2%</button>
+                                <button class="answer" data-answer="true">97.4%</button>
+                                <button class="answer" data-answer="false">97.3%</button>
+                            </div>
+                            
+                            <div class="question-container">
+                                <p>5. Quel pourcentage de l'eau sur Terre se trouve dans l'atmosphère ?</p>
+                                <button class="answer" data-answer="false">0.003%</button>
+                                <button class="answer" data-answer="true">0.001%</button>
+                                <button class="answer" data-answer="false">0.0009%</button>
+                                <button class="answer" data-answer="false">0.002%</button>
+                            </div>
+                            
                     </div>
-</div>
+        </div>
 </section>
+<!-- Section Quiz : Pourcentage d'eau dans le corps humain -->
+<section class="section" id="body-water-quiz">
+    <h2>Quiz : Pourcentage d'eau dans le corps humain</h2>
+    <div class="quiz-body-layout">
+        <div class="questions">
+            <div class="question-container" data-answer="75">
+                <p>Cerveau :</p>
+                <button class="option" data-value="65">65%</button>
+                <button class="option" data-value="75">75%</button>
+                <button class="option" data-value="85">85%</button>
+                <button class="option" data-value="95">95%</button>
+            </div>
+            <div class="question-container" data-answer="83">
+                <p>Sang :</p>
+                <button class="option" data-value="73">73%</button>
+                <button class="option" data-value="83">83%</button>
+                <button class="option" data-value="93">93%</button>
+                <button class="option" data-value="78">78%</button>
+            </div>
+            <div class="question-container" data-answer="68">
+                <p>Foie :</p>
+                <button class="option" data-value="58">58%</button>
+                <button class="option" data-value="68">68%</button>
+                <button class="option" data-value="78">78%</button>
+                <button class="option" data-value="88">88%</button>
+            </div>
+            <div class="question-container" data-answer="83">
+                <p>Rein :</p>
+                <button class="option" data-value="73">73%</button>
+                <button class="option" data-value="83">83%</button>
+                <button class="option" data-value="93">93%</button>
+                <button class="option" data-value="80">80%</button>
+            </div>
+            <div class="question-container" data-answer="10">
+                <p>Tissu adipeux :</p>
+                <button class="option" data-value="15">15%</button>
+                <button class="option" data-value="5">5%</button>
+                <button class="option" data-value="10">10%</button>
+                <button class="option" data-value="20">20%</button>
+            </div>
+            
+        </div>
+        <div class="result">
+            <p id="body-quiz-score">Score : 0/5</p>
+        </div>
+    </div>
+</section>
+
                     <!-- Score Container -->
                     <div class="score-container">
                         <p id="score">Bonnes réponses: 0 | Mauvaises réponses: 0</p>
@@ -163,7 +222,10 @@
     Le saviez-vous ? Plus de 80 % des eaux usées mondiales sont rejetées dans la nature sans traitement.</p>            </div>
         </div>
     </div>
+    <audio id="background-audio" src="../audio/Bruit de la mer et des  Vagues Ambiance.mp3" preload="auto" loop autoplay></audio>
 
     <script src="comparaison_terre_hommes.js"></script>
+
+    
 </body>
 </html>
