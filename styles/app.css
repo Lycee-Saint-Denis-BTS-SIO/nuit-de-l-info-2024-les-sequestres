@@ -1,0 +1,248 @@
+/* Réinitialisation et styles généraux */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f7fbfc;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Assure que la page occupe toute la hauteur de l'écran */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    background-color: #005f73;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.site-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s; /* Ajout d'une animation fluide */
+}
+
+.menu a:hover {
+    background-color: #94d2bd; /* Couleur d'accent au survol */
+    color: #005f73;
+    transform: translateY(-3px); /* Effet de soulèvement */
+}
+
+/* Main */
+main {
+    flex: 1; /* Permet à la section principale de s'étendre */
+
+}
+
+.section {
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.map{
+    width: 100vw;
+    height: 100svh;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-image: url(../images/World_map_ocean_locator-blank.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #D9F0FF;
+}
+
+
+.dot{
+    background-color: blue;
+    transition: .2s;
+    border: 2px solid rgb(11, 0, 128);
+}
+
+
+.map .tl, .map .tr, .map .bl, .map .br{
+    width: 50vw;
+    height: 50svh;
+    
+}
+
+.tl:hover > .dot, .tr:hover > .dot, .bl:hover > .dot, .br:hover > .dot{
+    background-color: red;
+    transition: .3z;
+    border: 2px solid rgb(128, 0, 0);
+}
+
+.tl .dot{
+    position: relative;
+    top: 2rem;
+    left: 48vw;
+    width: 20px;
+    height: 20px;
+    border-radius: 100vw;
+}
+
+
+.tr .dot{
+    position: relative;
+    top: 10rem;
+    left: 33vw;
+    width: 20px;
+    height: 20px;
+    border-radius: 100vw;
+}
+
+
+
+.bl .dot{
+    position: relative;
+    top: 0rem;
+    left: 22vw;
+    width: 20px;
+    height: 20px;
+    border-radius: 100vw;
+}
+
+.br .dot{
+    position: relative;
+    top: 4rem;
+    left: 35vw;
+    width: 20px;
+    height: 20px;
+    border-radius: 100vw;
+}
+
+
+.map .txtBl,.map .txtBr,.map .txtTl,.map .txtTr{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    position: absolute;
+    width: 0vw;
+    height: 0svh;
+    border-radius: 1rem;
+    padding: 3rem;
+    background-color: rgb(0, 58, 124);
+    color: white;
+    opacity: 0;
+}
+
+/* Styles pour les divs survolées */
+.map .active {
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.map .txtTl.active,
+.map .txtTr.active,
+.map .txtBl.active,
+.map .txtBr.active {
+    width: 40vw;
+    height: 45svh;
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+
+.map .txtTl.active{
+    margin-left: 50vw;
+    top: calc(10rem - 30px);
+}
+
+.map .txtTr.active{
+    top: calc(10rem - 30px);
+    margin-right: 50vw;
+}
+
+.map .txtBl.active{
+    top: calc(32rem - 3px);
+    margin-left: 50vw;
+}
+
+.map .txtBr.active{
+    top: calc(32rem - 3px);
+    margin-right: 50vw;
+}
+
+
+
+.map .txtBl a,.map .txtBr a,.map .txtTl a,.map .txtTr a{
+    text-decoration: none;
+    
+    background-color: #94d2bd; /* Couleur d'accent au survol */
+    color: #005f73;
+    padding: 0.5rem 2rem;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s; /* Ajout d'une animation fluide */
+    
+}
+
+.txt p{
+    margin: 1rem 0;
+    margin-bottom: 1.5rem;
+}
+
+.map .txtBl  a:hover ,.map .txtBr  a:hover ,.map .txtTl  a:hover ,.map .txtTr  a:hover {
+    background-color: #94d2bd; /* Couleur d'accent au survol */
+    
+    color: #0053;
+    transform: translateY(-3px); /* Effet de soulèvement */
+    transition: 2s;
+}
+
+
+
+
+
+/* Footer */
+footer {
+    background-color: #005f73;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: auto; /* Place le footer en bas si le contenu est insuffisant */
+    position: relative;
+    bottom: 0;
+    width: 100%; /* S'assure que le footer couvre toute la largeur */
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Effet d'ombre légère */
+}
+
+footer a {
+    color: #94d2bd;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Animation fluide sur la couleur */
+}
+
+footer a:hover {
+    color: white; /* Change la couleur au survol */
+    
+}
