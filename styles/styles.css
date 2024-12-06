@@ -12,6 +12,22 @@
             width: 80%;
             margin: 0 auto;
         }
+        .img1 {
+            display: block;
+            margin: 20px auto;
+            max-width: 50%;
+            height: auto;
+        }
+        .video-wrapper{
+            width: 30%;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .session video {
+            max-width: 50%;
+            height: auto;
+        }
 
         header {
             background-color: #FF00FF;
