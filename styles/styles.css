@@ -1,0 +1,92 @@
+/* Réinitialisation et styles généraux */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f7fbfc;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Assure que la page occupe toute la hauteur de l'écran */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    background-color: #005f73;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.site-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s; /* Ajout d'une animation fluide */
+}
+
+.menu a:hover {
+    background-color: #94d2bd; /* Couleur d'accent au survol */
+    color: #005f73;
+    transform: translateY(-3px); /* Effet de soulèvement */
+}
+
+/* Main */
+main {
+    flex: 1; /* Permet à la section principale de s'étendre */
+    margin: 2rem 0;
+}
+
+.section {
+    padding: 2rem 0;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    background-color: #005f73;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: auto; /* Place le footer en bas si le contenu est insuffisant */
+    position: relative;
+    bottom: 0;
+    width: 100%; /* S'assure que le footer couvre toute la largeur */
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Effet d'ombre légère */
+}
+
+footer a {
+    color: #94d2bd;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Animation fluide sur la couleur */
+}
+
+footer a:hover {
+    color: white; /* Change la couleur au survol */
+}
