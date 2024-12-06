@@ -1,0 +1,46 @@
+/* Réinitialisation et styles généraux */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#backgroundCanvas {
+    width: 1024px;
+    height: 650px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    
+    background-image: url('../images/jeu_plastique_qui_tombe/water.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.canvas-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+canvas {
+    position: absolute;
+    background-color: transparent;
+}
+
+.twix-droit, /* lol */ 
+.twix-gauche {
+    flex: 0 0 20%;
+    background-color: #f8eded62;
+    border-radius: 5%;
+    padding: 10px;
+    width: 100%;
+    font-size: 30px;
+    text-align: center;
+}
