@@ -112,11 +112,13 @@ footer {
     width: 100%;
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
 }
+
+/* Images responsives */
 .responsive-image {
-    display: block; /* Évite les marges blanches indésirables */
-    max-width: 70%; /* L'image ne dépassera pas la largeur de son conteneur */
-    height: auto; /* La hauteur s'adapte proportionnellement à la largeur */
-    margin: 0 auto; /* Centre l'image horizontalement si le conteneur est plus large */
-    object-fit: contain; /* Assure que l'image reste entière et respecte ses proportions */
-    border-radius: 0; /* Si besoin, mettez une bordure arrondie */
+    display: block;
+    max-width: 70%;
+    height: auto;
+    margin: 0 auto;
+    object-fit: contain;
+    border-radius: 0; /* Ajustez si vous souhaitez des bords arrondis */
 }
