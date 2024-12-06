@@ -1,3 +1,25 @@
+<?php
+    function randomSize(){
+        $size[] = null;
+        $size[0] = rand(20,70);
+        $size[1] = rand(20,70);
+ 
+        return $size;
+    }
+ 
+    function randomPos(){
+        $position[] = null;
+        $position[0] = rand(0,800);
+        $position[1] = rand(-700,300);
+ 
+        return $position;
+    }
+ 
+    function addLogo($position, $size, $logoId){
+        echo '<img src="images/LyrecoNegatif2.png" alt="" id="'.$logoId.'" style="right:'.$position[0].'px; bottom:'.$position[1].'px; width:'.$size[0].'px; height:'.$size[1].'px; position: absolute; opacity: 50%;" onclick=animation('.$logoId.')>';
+    }
+ 
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -18,15 +40,13 @@
             <nav>
                 <ul class="menu">
                     <li><a href="#home">Accueil</a></li>
-                    <li><a href="./vues/credit.html">Credits</a></li>    
-                    <li><a href="./vues/index_retro.html">Retro</a></li>
+                    <li><a href="/vues/credit.html">Crédits</a></li>
+                    <li><a href="/vues/index_retro.html">Retro</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-    
     <main>
-        
         <div class="container">
             <section class="section" id="home">
                 <div class="video-wrapper">
@@ -41,9 +61,15 @@
                 <h2>Bienvenue</h2>
                 <p>Projet nuit de l'info de l'équipe les séquestrés pour Race for Water, en cliquant sur le bouton "Jouer" vous accédez à plein de mini-jeux sur le thème du corps et de l'océan </p>
                 <div class="button-container">
-                    <a href="./vues/app.html" target="_blank">
+                    <a href="test.html" target="_blank">
                         <button class="cta-button">Jouer</button>
                     </a>
+                    <?php
+                        $position = randomPos();
+                        $size = randomSize();
+                        $logoId = 1;
+                        addLogo($position, $size, $logoId);
+                    ?>
                 <h2>Qu'est-ce que Race For Water ?</h2>
                 <p>Race for Water est une fondation suisse dédiée à la protection des océans contre la pollution plastique.
                  Elle utilise un bateau innovant alimenté par des énergies renouvelables (solaire, éolienne et hydrogène) pour sensibiliser le public et promouvoir des solutions durables. Son objectif est de préserver les ressources en eau et de lutter contre les déchets marins.</p>
@@ -62,5 +88,6 @@
             <p>© 2024 - Protection des Océans</p>
         </div>
     </footer>
+
 </body>
 </html>
