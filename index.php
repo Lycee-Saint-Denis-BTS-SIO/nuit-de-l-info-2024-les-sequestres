@@ -40,13 +40,14 @@
             <nav>
                 <ul class="menu">
                     <li><a href="#home">Accueil</a></li>
-                    <li><a href="/vues/credit.html">Crédits</a></li>
-                    <li><a href="/vues/index_retro.html">Retro</a></li>
+                    <li><a href="./vues/credit.html">Credits</a></li>    
+                    <li><a href="./vues/index_retro.html">Retro</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <main>
+        
         <div class="container">
             <section class="section" id="home">
                 <div class="video-wrapper">
@@ -61,7 +62,7 @@
                 <h2>Bienvenue</h2>
                 <p>Projet nuit de l'info de l'équipe les séquestrés pour Race for Water, en cliquant sur le bouton "Jouer" vous accédez à plein de mini-jeux sur le thème du corps et de l'océan </p>
                 <div class="button-container">
-                    <a href="test.html" target="_blank">
+                    <a href="./vues/app.html" target="_blank">
                         <button class="cta-button">Jouer</button>
                     </a>
                     <?php
