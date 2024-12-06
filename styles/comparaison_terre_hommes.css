@@ -434,4 +434,147 @@ main {
     align-items: center; /* Centre verticalement le texte */
     justify-content: center; /* Centre horizontalement le texte */
 }
-    
+    /* Section pourcentage d'eau */
+#body-water-quiz {
+    margin-top: 3rem;
+    padding: 2rem;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+#body-water-quiz h2 {
+    font-size: 1.8rem;
+    color: #005f73;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #94d2bd;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+}
+
+/* Questions dans le nouveau quiz */
+.quiz-body-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.question-container {
+    text-align: center;
+    background: #e7f5f8;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.question-container p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #005f73;
+    margin-bottom: 0.8rem;
+}
+
+button.option {
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #1976d2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button.option:hover {
+    background-color: #42a5f5;
+}
+
+button.option.correct {
+    background-color: #4caf50; /* Vert pour bonnes réponses */
+}
+
+button.option.wrong {
+    background-color: #f44336; /* Rouge pour mauvaises réponses */
+}
+
+.result {
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.image-section {
+    display: flex;
+    justify-content: center; /* Centre les images horizontalement */
+    align-items: center; /* Aligne les images verticalement */
+    gap: 1.5rem; /* Espacement entre les images */
+    margin: 2rem 0; /* Marge autour de la section */
+}
+
+.image-container {
+    flex: 1; /* Permet aux images de prendre une largeur égale */
+    max-width: 45%; /* Limite la largeur maximale de chaque image */
+}
+
+.image-container img {
+    width: 100%; /* Ajuste la largeur de l'image au conteneur */
+    height: auto; /* Garde les proportions */
+    border-radius: 10px; /* Arrondit les coins des images */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajoute une ombre subtile */
+    transition: transform 0.3s ease; /* Ajoute un effet de zoom */
+}
+
+.image-container img:hover {
+    transform: scale(1.05); /* Zoom léger au survol */
+}
+.image-container img {
+    width: 100%; /* Ajuste la largeur de l'image au conteneur */
+    height: 300px; /* Définit une hauteur fixe pour toutes les images */
+    object-fit: cover; /* Coupe les images pour qu'elles remplissent leur conteneur sans déformer */
+    border-radius: 10px; /* Arrondit les coins des images */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajoute une ombre subtile */
+    transition: transform 0.3s ease; /* Ajoute un effet de zoom */
+}
+
+.image-container {
+    flex: 1; /* Permet aux conteneurs de prendre une largeur égale */
+    display: flex; /* Ajoute un flex pour aligner les images uniformément */
+    align-items: center; /* Centre verticalement les images dans leurs conteneurs */
+}
+/* Modal pour afficher l'image */
+.image-modal {
+    display: none; /* Caché par défaut */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8); /* Fond semi-transparent */
+}
+
+.image-modal .modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%; /* Largeur max */
+    max-height: 90%; /* Hauteur max */
+    border-radius: 10px;
+}
+
+.image-modal .close-modal {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.image-modal .close-modal:hover,
+.image-modal .close-modal:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
